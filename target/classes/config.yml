@@ -1,0 +1,11 @@
+Redis:
+  Host: 'localhost'
+  Password: ''
+  DbId: 0
+BackboneRedis:
+  Host: 'localhost'
+  Password: ''
+  DbId: 0
+NametagPacketRestriction:
+  Enabled: false
+  BypassPrefix: '&a'
