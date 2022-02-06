@@ -36,6 +36,7 @@ cc\fyre\proton\deathmessage\damage\UnknownDamage.class
 cc\fyre\proton\deathmessage\damage\PlayerDamage.class
 cc\fyre\proton\deathmessage\damage\Damage.class
 cc\fyre\proton\hologram\type\UpdatingHologram$1.class
+cc\fyre\proton\scoreboard\construct\TitleGetter$1.class
 cc\fyre\proton\menu\Attributes$1$1.class
 cc\fyre\proton\util\PingUtils.class
 cc\fyre\proton\border\runnable\ParticleRunnable.class

@@ -19,6 +19,11 @@ public final class TimeUtils {
         return formatIntoMMSS(secs);
     }
 
+    public static String formatLongIntoHHMMSS(long secs) {
+        int unconvertedSeconds = (int)secs;
+        return TimeUtils.formatIntoMMSS(unconvertedSeconds);
+    }
+
     /**
      * Formats the time into a format of HH:MM:SS. Example: 3600 (1 hour) displays as '01:00:00'
      *

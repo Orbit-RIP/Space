@@ -151,7 +151,7 @@ public final class NameTagHandler {
         for (NameTagInfo teamInfo : this.registeredTeams) {
 
             if (teamInfo.getPrefix().equals(prefix) && teamInfo.getSuffix().equals(suffix)) {
-                System.out.println("EQUALS");
+//                System.out.println("EQUALS");
                 return teamInfo;
             }
 
@@ -159,7 +159,7 @@ public final class NameTagHandler {
 
         final NameTagInfo newTeam = new NameTagInfo(String.valueOf(this.teamCreateIndex++), prefix, suffix);
 
-        System.out.println("CREATING");
+//        System.out.println("CREATING");
 
         this.registeredTeams.add(newTeam);
 

@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
+import org.bukkit.entity.Entity;
 
 import java.util.*;
 
@@ -385,6 +386,10 @@ public class Cuboid implements Iterable<Block>, Cloneable, ConfigurationSerializ
     public boolean contains(Location l) {
         if (!this.worldName.equals(l.getWorld().getName())) return false;
         return this.contains(l.getBlockX(), l.getBlockY(), l.getBlockZ());
+    }
+
+    public boolean contains(Entity e) {
+        return this.contains(e.getLocation());
     }
 
     /**

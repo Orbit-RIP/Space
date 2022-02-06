@@ -43,6 +43,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.Calendar;
+import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -73,7 +74,7 @@ public final class Proton extends JavaPlugin {
     @Getter private PidginHandler pidginHandler;
     @Getter private UUIDCache uuidCache;
 
-    public static final Gson GSON = new com.google.gson.GsonBuilder()
+    public static final Gson GSON = new GsonBuilder()
             .registerTypeHierarchyAdapter(PotionEffect.class, new PotionEffectAdapter())
             .registerTypeHierarchyAdapter(ItemStack.class, new ItemStackAdapter())
             .registerTypeHierarchyAdapter(Location.class, new LocationAdapter())
@@ -91,6 +92,8 @@ public final class Proton extends JavaPlugin {
             .registerTypeAdapter(BlockVector.class, new BlockVectorAdapter())
             .serializeNulls()
             .create();
+
+    public static Random RANDOM = RANDOM = new Random();
 
     @Override
     public void onEnable() {
