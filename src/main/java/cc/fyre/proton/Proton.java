@@ -1,5 +1,6 @@
 package cc.fyre.proton;
 
+import cc.fyre.proton.nametag.FrozenNametagHandler;
 import cc.fyre.proton.redis.IRedisCommand;
 import cc.fyre.proton.serialization.*;
 import cc.fyre.proton.visibility.VisibilityHandler;
@@ -21,7 +22,6 @@ import cc.fyre.proton.event.HourEvent;
 import cc.fyre.proton.hologram.HologramHandler;
 import cc.fyre.proton.pidgin.PidginHandler;
 
-import cc.fyre.proton.redis.RedisCommand;
 import cc.fyre.proton.scoreboard.ScoreboardHandler;
 
 import cc.fyre.proton.tab.TabHandler;
@@ -29,7 +29,6 @@ import cc.fyre.proton.util.ItemUtils;
 import cc.fyre.proton.util.TPSUtils;
 import cc.fyre.proton.uuid.UUIDCache;
 import cc.fyre.proton.command.CommandHandler;
-import cc.fyre.proton.nametag.NameTagHandler;
 
 import org.bukkit.Location;
 
@@ -48,31 +47,31 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+@Getter
 public final class Proton extends JavaPlugin {
 
     @Getter private static Proton instance;
 
-    @Getter private IRedisCommand iRedisCommand;
+    private IRedisCommand iRedisCommand;
 
-    @Getter private CommandHandler commandHandler;
-    @Getter private HologramHandler hologramHandler;
+    private CommandHandler commandHandler;
+    private HologramHandler hologramHandler;
 
-    @Getter private TabHandler tabHandler;
-    @Getter private NameTagHandler nameTagHandler;
-    @Getter private ScoreboardHandler scoreboardHandler;
+    private TabHandler tabHandler;
+    private ScoreboardHandler scoreboardHandler;
 
-    @Getter private EconomyHandler economyHandler;
-    @Getter private AutoRebootHandler autoRebootHandler;
+    private EconomyHandler economyHandler;
+    private AutoRebootHandler autoRebootHandler;
 
-    @Getter private DeathMessageHandler deathMessageHandler;
-    @Getter private CombatLoggerHandler combatLoggerHandler;
+    private DeathMessageHandler deathMessageHandler;
+    private CombatLoggerHandler combatLoggerHandler;
 
-    @Getter private BorderHandler borderHandler;
-    @Getter private BossBarHandler bossBarHandler;
-    @Getter private VisibilityHandler visibilityHandler;
+    private BorderHandler borderHandler;
+    private BossBarHandler bossBarHandler;
+    private VisibilityHandler visibilityHandler;
 
-    @Getter private PidginHandler pidginHandler;
-    @Getter private UUIDCache uuidCache;
+    private PidginHandler pidginHandler;
+    private UUIDCache uuidCache;
 
     public static final Gson GSON = new GsonBuilder()
             .registerTypeHierarchyAdapter(PotionEffect.class, new PotionEffectAdapter())
@@ -108,7 +107,7 @@ public final class Proton extends JavaPlugin {
         this.hologramHandler = new HologramHandler();
 
         this.tabHandler = new TabHandler();
-        this.nameTagHandler = new NameTagHandler();
+        FrozenNametagHandler.init();
         this.scoreboardHandler = new ScoreboardHandler();
 
         this.economyHandler = new EconomyHandler();

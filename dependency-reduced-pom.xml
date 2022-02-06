@@ -36,23 +36,18 @@
   </repositories>
   <dependencies>
     <dependency>
-      <groupId>com.comphenix.protocol</groupId>
-      <artifactId>ProtocolLib</artifactId>
-      <version>LATEST</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>byte-buddy</artifactId>
-          <groupId>net.bytebuddy</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>net.hylist</groupId>
       <artifactId>spigot-server</artifactId>
       <version>1.7.10-R0.1-SNAPSHOT</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/lib/mspigot.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.comphenix.protocol</groupId>
+      <artifactId>ProtocolLib</artifactId>
+      <version>LATEST</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/ProtocolLib.jar</systemPath>
     </dependency>
   </dependencies>
   <properties>

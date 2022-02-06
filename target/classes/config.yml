@@ -6,6 +6,7 @@ BackboneRedis:
   Host: 'localhost'
   Password: ''
   DbId: 0
+disableNametags: false
 NametagPacketRestriction:
   Enabled: false
   BypassPrefix: '&a'

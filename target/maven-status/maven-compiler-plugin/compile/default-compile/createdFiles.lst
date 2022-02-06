@@ -37,6 +37,7 @@ cc\fyre\proton\deathmessage\damage\PlayerDamage.class
 cc\fyre\proton\deathmessage\damage\Damage.class
 cc\fyre\proton\hologram\type\UpdatingHologram$1.class
 cc\fyre\proton\scoreboard\construct\TitleGetter$1.class
+cc\fyre\proton\nametag\FrozenNametagHandler.class
 cc\fyre\proton\menu\Attributes$1$1.class
 cc\fyre\proton\util\PingUtils.class
 cc\fyre\proton\border\runnable\ParticleRunnable.class
@@ -44,6 +45,7 @@ cc\fyre\proton\menu\Attributes$Operation.class
 cc\fyre\proton\util\countdown\CountdownBuilder.class
 cc\fyre\proton\hologram\HologramHandler$1.class
 cc\fyre\proton\util\UUIDUtils.class
+cc\fyre\proton\nametag\NametagInfo.class
 cc\fyre\proton\menu\Menu$1.class
 cc\fyre\proton\serialization\PlayerInventorySerializer.class
 cc\fyre\proton\deathmessage\trackers\PVPTracker$PVPDamage.class
@@ -69,7 +71,6 @@ cc\fyre\proton\hologram\builder\HologramBuilder.class
 cc\fyre\proton\menu\Attributes$Attribute.class
 cc\fyre\proton\command\CommandHandler.class
 cc\fyre\proton\deathmessage\trackers\ArrowTracker$ArrowDamageByPlayer.class
-cc\fyre\proton\nametag\construct\NameTagInfo.class
 cc\fyre\proton\border\listener\InternalBorderListener.class
 cc\fyre\proton\border\runnable\BorderTask$BorderAction.class
 cc\fyre\proton\serialization\LocationSerializer.class
@@ -78,12 +79,12 @@ cc\fyre\proton\serialization\PotionEffectAdapter.class
 mkremins\fanciful\MessagePart$1.class
 cc\fyre\proton\menu\ButtonListener.class
 cc\fyre\proton\deathmessage\trackers\FallTracker$FallDamage.class
+cc\fyre\proton\nametag\NametagProvider.class
 cc\fyre\proton\scoreboard\config\ScoreboardConfiguration.class
 cc\fyre\proton\scoreboard\construct\ScoreGetter.class
 cc\fyre\proton\util\TPSUtils.class
 cc\fyre\proton\visibility\provider\VisibilityProvider.class
 cc\fyre\proton\command\param\defaults\WorldParameterType.class
-cc\fyre\proton\nametag\construct\NameTagUpdate.class
 cc\fyre\proton\util\NumberUtils.class
 cc\fyre\proton\hologram\type\BaseHologram.class
 cc\fyre\proton\command\flag\Flag.class
@@ -92,11 +93,9 @@ cc\fyre\proton\visibility\provider\OverrideProvider.class
 cc\fyre\proton\command\processor\Type.class
 cc\fyre\proton\event\HourEvent.class
 cc\fyre\proton\combatlogger\listener\CombatLoggerListener$1.class
-cc\fyre\proton\nametag\listener\NameTagListener.class
 cc\fyre\proton\command\processor\MethodProcessor.class
 cc\fyre\proton\util\EnchantUtil.class
 cc\fyre\proton\serialization\ItemStackSerializer.class
-cc\fyre\proton\nametag\provider\DefaultNameTagProvider.class
 cc\fyre\proton\combatlogger\CombatLogger.class
 cc\fyre\proton\command\param\defaults\FloatParameterType.class
 cc\fyre\proton\packet\ScoreboardTeamPacketMod.class
@@ -104,7 +103,6 @@ cc\fyre\proton\util\InventoryUtils.class
 cc\fyre\proton\menu\Attributes$Attribute$Builder.class
 cc\fyre\proton\util\ItemUtils$ArmorPart.class
 cc\fyre\proton\command\param\defaults\EnchantmentParameterType.class
-cc\fyre\proton\nametag\NameTagHandler.class
 cc\fyre\proton\util\Pair.class
 cc\fyre\proton\border\event\player\PlayerExitBorderEvent.class
 cc\fyre\proton\menu\Attributes.class
@@ -127,7 +125,6 @@ cc\fyre\proton\menu\Attributes$AttributeType.class
 cc\fyre\proton\command\param\defaults\EntityTypeParameterType.class
 cc\fyre\proton\uuid\impl\IUUIDCache.class
 cc\fyre\proton\deathmessage\trackers\EntityTracker.class
-cc\fyre\proton\nametag\provider\NameTagProvider.class
 cc\fyre\proton\pidgin\packet\listener\PacketListener.class
 cc\fyre\proton\combatlogger\CombatLoggerConfiguration.class
 cc\fyre\proton\util\paginate\FancyPaginatedOutput.class
@@ -139,7 +136,7 @@ cc\fyre\proton\deathmessage\trackers\BurnTracker$BurnDamage.class
 cc\fyre\proton\command\param\defaults\offlineplayer\OfflinePlayerWrapper.class
 cc\fyre\proton\deathmessage\listener\DeathListener.class
 cc\fyre\proton\hologram\command\HologramListCommand.class
-cc\fyre\proton\nametag\construct\NameTagComparator.class
+cc\fyre\proton\nametag\NametagProvider$DefaultNametagProvider.class
 cc\fyre\proton\util\ClassUtils.class
 cc\fyre\proton\scoreboard\ScoreboardHandler.class
 cc\fyre\proton\util\MojangUtil.class
@@ -208,6 +205,7 @@ cc\fyre\proton\util\qr\QRCodeMapRenderer.class
 cc\fyre\proton\deathmessage\trackers\GeneralTracker$1.class
 cc\fyre\proton\menu\Attributes$1.class
 cc\fyre\proton\menu\pagination\PageButton.class
+cc\fyre\proton\nametag\NametagListener.class
 cc\fyre\proton\menu\buttons\CloseButton.class
 cc\fyre\proton\hologram\command\HologramDeleteCommand.class
 cc\fyre\proton\util\Callback.class
@@ -220,7 +218,6 @@ cc\fyre\proton\combatlogger\adapter\CombatLoggerAdapter.class
 cc\fyre\proton\deathmessage\event\CustomPlayerDamageEvent.class
 cc\fyre\proton\deathmessage\trackers\BurnTracker.class
 cc\fyre\proton\bossbar\BossBarListener.class
-cc\fyre\proton\nametag\NameTagThread.class
 mkremins\fanciful\MessagePart.class
 cc\fyre\proton\hologram\construct\HologramLine.class
 cc\fyre\proton\command\flag\Data.class
@@ -233,6 +230,7 @@ cc\fyre\proton\util\DirectionUtils.class
 cc\fyre\proton\deathmessage\damage\MobDamage.class
 cc\fyre\proton\serialization\VectorAdapter.class
 cc\fyre\proton\border\Border$EnsureAction.class
+cc\fyre\proton\nametag\NametagUpdate.class
 cc\fyre\proton\command\param\defaults\IntegerParameterType.class
 cc\fyre\proton\hologram\packet\HologramPacket.class
 cc\fyre\proton\deathmessage\DeathMessageHandler.class
@@ -255,6 +253,7 @@ cc\fyre\proton\menu\Button$1.class
 mkremins\fanciful\FancyMessage.class
 cc\fyre\proton\command\processor\Processor.class
 cc\fyre\proton\hologram\type\UpdatingHologram.class
+cc\fyre\proton\nametag\NametagThread.class
 cc\fyre\proton\economy\EconomyHandler$1.class
 cc\fyre\proton\pidgin\PidginUser.class
 cc\fyre\proton\menu\Button.class
