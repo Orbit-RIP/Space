@@ -1,6 +1,7 @@
 package cc.fyre.proton.menu;
 
 import cc.fyre.proton.Proton;
+import com.google.common.base.Preconditions;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.server.v1_7_R4.EntityPlayer;
@@ -28,6 +29,7 @@ public abstract class Menu {
     }
 
     private static Method openInventoryMethod;
+    private String staticTitle = null;
     @Getter private ConcurrentHashMap<Integer, Button> buttons = new ConcurrentHashMap<>();
 
     @Getter @Setter private boolean autoUpdate = false;
@@ -99,6 +101,13 @@ public abstract class Menu {
         return item;
     }
 
+    public Menu() {
+    }
+
+    public Menu(String staticTitle) {
+        this.staticTitle = (String) Preconditions.checkNotNull((Object)staticTitle);
+    }
+
     public void openMenu(Player player) {
 
         final EntityPlayer entityPlayer = ((CraftPlayer)player).getHandle();
@@ -164,7 +173,9 @@ public abstract class Menu {
     }
 
 
-    public abstract String getTitle(Player player);
+    public String getTitle(Player player) {
+        return this.staticTitle;
+    }
 
     public abstract Map<Integer, Button> getButtons(Player player);
 
