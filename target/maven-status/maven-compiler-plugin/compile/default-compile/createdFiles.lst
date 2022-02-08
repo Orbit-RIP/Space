@@ -97,6 +97,7 @@ cc\fyre\proton\command\processor\MethodProcessor.class
 cc\fyre\proton\util\EnchantUtil.class
 cc\fyre\proton\serialization\ItemStackSerializer.class
 cc\fyre\proton\combatlogger\CombatLogger.class
+cc\fyre\proton\command\param\filter\BaseFilter.class
 cc\fyre\proton\command\param\defaults\FloatParameterType.class
 cc\fyre\proton\packet\ScoreboardTeamPacketMod.class
 cc\fyre\proton\util\InventoryUtils.class
@@ -135,6 +136,7 @@ cc\fyre\proton\util\EnchantmentWrapper.class
 cc\fyre\proton\deathmessage\trackers\BurnTracker$BurnDamage.class
 cc\fyre\proton\command\param\defaults\offlineplayer\OfflinePlayerWrapper.class
 cc\fyre\proton\deathmessage\listener\DeathListener.class
+cc\fyre\proton\command\param\filter\StrictFilter.class
 cc\fyre\proton\hologram\command\HologramListCommand.class
 cc\fyre\proton\nametag\NametagProvider$DefaultNametagProvider.class
 cc\fyre\proton\util\ClassUtils.class
@@ -227,6 +229,7 @@ mkremins\fanciful\TextualComponent$ArbitraryTextTypeComponent.class
 cc\fyre\proton\tab\TabHandler.class
 cc\fyre\proton\command\defaults\EvalCommand.class
 cc\fyre\proton\util\DirectionUtils.class
+cc\fyre\proton\command\param\filter\NormalFilter.class
 cc\fyre\proton\deathmessage\damage\MobDamage.class
 cc\fyre\proton\serialization\VectorAdapter.class
 cc\fyre\proton\border\Border$EnsureAction.class

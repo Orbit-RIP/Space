@@ -6,6 +6,6 @@ import java.util.LinkedList;
 
 public interface ScoreGetter {
 
-    String[] getScores(LinkedList<String> linkedList,Player player);
+    void getScores(LinkedList<String> linkedList,Player player);
 
 }
