@@ -264,12 +264,12 @@ public class BaseHologram implements Hologram {
 			return;
 		}
 
-		System.out.println("Updating hologram for " + player.getName());
+//		System.out.println("Updating hologram for " + player.getName());
 
 		if (this.lastLines.size() != this.lines.size()) {
 			this.destroy0(player);
 			this.show(player);
-			System.out.println(1);
+//			System.out.println(1);
 			return;
 		}
 
@@ -294,14 +294,14 @@ public class BaseHologram implements Hologram {
 				container.getWatchableCollectionModifier().write(0,watchableObjects);
 
 				try {
-					System.out.println(2);
+//					System.out.println(2);
 					ProtocolLibrary.getProtocolManager().sendServerPacket(player,container);
 				} catch (Exception ignored) {}
 
 			} catch (IndexOutOfBoundsException e) {
 				this.destroy0(player);
 				this.show(player);
-				System.out.println(3);
+//				System.out.println(3);
 			}
 
 		}

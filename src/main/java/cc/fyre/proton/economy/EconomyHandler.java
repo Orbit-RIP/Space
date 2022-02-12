@@ -27,8 +27,8 @@ public class EconomyHandler {
 
         },Proton.getInstance());
 
-        /*
-        Proton.getInstance().runRedisCommand((redis) -> {
+
+        Proton.getInstance().getIRedisCommand().runRedisCommand((redis) -> {
 
             for (String key : redis.keys("balance.*")) {
 
@@ -40,7 +40,7 @@ public class EconomyHandler {
             return null;
         });
 
-         */
+
     }
 
     public void setBalance(UUID uuid, double balance) {
