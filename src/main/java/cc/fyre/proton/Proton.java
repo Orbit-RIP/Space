@@ -113,7 +113,9 @@ public final class Proton extends JavaPlugin {
         this.economyHandler = new EconomyHandler();
         this.autoRebootHandler = new AutoRebootHandler();
 
-        this.deathMessageHandler = new DeathMessageHandler();
+        if (!getConfig().getBoolean("disableDeathmessages")) {
+            this.deathMessageHandler = new DeathMessageHandler();
+        }
         this.combatLoggerHandler = new CombatLoggerHandler();
 
         this.borderHandler = new BorderHandler();
